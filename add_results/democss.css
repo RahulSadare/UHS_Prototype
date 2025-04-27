@@ -1,0 +1,687 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Roboto Mono", monospace; */
+  font-family: "Calibri", sans-serif;
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to bottom right, #f1a3b3, #ee859a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1600px;
+  height: 90vh;
+  max-height: 700px;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 220px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+  overflow-y: auto;
+}
+
+.logo img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.nav-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-btn {
+  background-color: white;
+  border: none;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 20px;
+  text-align: left;
+  cursor: pointer;
+  font-size: inherit;
+  transition: all 0.3s ease;
+  width: 100%;
+  border-bottom: 1px solid #f6a4b5;
+}
+
+.nav-btn.active {
+  background-color: #ffeac4;
+  border-left: 4px solid #ffae00;
+  border-bottom: 4px solid #ffae00;
+  color: #000;
+}
+
+.nav-btn:hover {
+  background-color: #ffd6e0;
+  border-bottom: 4px solid #ffb1c4;
+  color: #000;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1 1 auto;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 1px 40px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.header-icon img {
+  width: 60px;
+}
+
+.power-btn img {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Dynamic content area */
+.content-area {
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+}
+
+.Parent_details {
+  flex-grow: 1;
+  background-color: #fff0f4;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+}
+
+.info-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Card base styling */
+.card {
+  background-color: #fff0f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  max-height: 100%;
+}
+
+/* Shorter card height for parent & notes */
+.parent-card,
+.notes-card {
+  height: 260px;
+  overflow-y: auto;
+}
+
+.notes-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+
+.notes-content::-webkit-scrollbar {
+  width: 6px;
+}
+.notes-content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.parent-note-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.centered-buttons {
+  justify-content: center;
+}
+
+.action-btn {
+  background-color: #a6faff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #7de7f0;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.side-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 160px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.side-btn:hover {
+  background-color: #ffe6ee;
+}
+
+/* Prenatal Card Styles */
+.prenatal-card {
+  background-color: #fff0f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
+}
+
+.prenatal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prenatal-table td {
+  padding: 8px 12px;
+  vertical-align: middle;
+  max-width: 250px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Add separation between left and right content blocks */
+.prenatal-table td:nth-child(2) {
+  padding-right: 30px;
+  border-right: 2px solid #ffd1dc;
+}
+
+/* Group radio buttons (styled like checkboxes) */
+.option-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Make radios look like checkboxes with tick */
+.prenatal-table input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #ff6f91;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.prenatal-table input[type="radio"]:checked::before {
+  content: "✓";
+  font-size: 14px;
+  color: #ff6f91;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-weight: bold;
+}
+
+.specify-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.specify-input {
+  border: none;
+  border-bottom: 1px solid #333;
+  background: transparent;
+  width: 250px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Make Notes heading and content larger */
+.postnatal-card h3,
+.others-card h3,
+.natal-card h3,
+.card.parent-card h3,
+.prenatal-card h3,
+.card.notes-card h3 {
+  font-size: 24px !important;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+/* Others Card Styles */
+.others-card {
+  background-color: #fff0f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
+}
+
+.others-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.others-table td {
+  padding: 8px 12px;
+  vertical-align: middle;
+  max-width: 250px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.others-table td:nth-child(2) {
+  padding-right: 30px;
+  border-right: 2px solid #ffd1dc;
+}
+
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.others-table input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #ff6f91;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.others-table input[type="radio"]:checked::before {
+  content: "✓";
+  font-size: 14px;
+  color: #ff6f91;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-weight: bold;
+}
+
+.specify-input {
+  border: none;
+  border-bottom: 1px solid #333;
+  background: transparent;
+  width: 250px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.hidden {
+  display: none;
+}
+/* Styled Checkboxes Like Radio Buttons */
+.others-table input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #ff6f91;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.others-table input[type="checkbox"]:checked::before {
+  content: "✓";
+  font-size: 14px;
+  color: #ff6f91;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-weight: bold;
+}
+
+/* Natal Card Styles */
+.natal-card {
+  background-color: #fff0f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
+}
+
+.natal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.natal-table td {
+  padding: 8px 12px;
+  vertical-align: middle;
+  max-width: 250px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Group radio buttons (styled like checkboxes) */
+.option-group {
+  display: inline-flex;
+  gap: 10px;
+  white-space: nowrap;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Make radios look like checkboxes with tick */
+.natal-table input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #ff6f91;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.natal-table input[type="radio"]:checked::before {
+  content: "✓";
+  font-size: 14px;
+  color: #ff6f91;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-weight: bold;
+}
+
+.specify-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.specify-input {
+  border: none;
+  border-bottom: 1px solid #333;
+  background: transparent;
+  width: 250px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.specify-input-line {
+  border: none;
+  border-bottom: 1.5px solid #333;
+  background: transparent;
+  width: 60px;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  text-align: center;
+}
+
+.specify-input-line::-webkit-inner-spin-button,
+.specify-input-line::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.unit-label {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+#dbcDisplay {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+#lbwDisplay {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+#pdDisplay {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+#apgar1Display {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+#apgar2Display {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+/* Natal Card Styles */
+.postnatal-card {
+  background-color: #fff0f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: Calibri, sans-serif;
+  font-size: 14px;
+}
+
+.postnatal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.postnatal-table td {
+  padding: 8px 12px;
+  vertical-align: middle;
+  max-width: 250px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Group radio buttons (styled like checkboxes) */
+.option-group {
+  display: inline-flex;
+  gap: 10px;
+  white-space: nowrap;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Make radios look like checkboxes with tick */
+.postnatal-table input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #ff6f91;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.postnatal-table input[type="radio"]:checked::before {
+  content: "✓";
+  font-size: 14px;
+  color: #ff6f91;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-weight: bold;
+}
+
+.specify-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.specify-input {
+  border: none;
+  border-bottom: 1px solid #333;
+  background: transparent;
+  width: 250px;
+  outline: none;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.specify-input-line {
+  border: none;
+  border-bottom: 1.5px solid #333;
+  background: transparent;
+  width: 60px;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  text-align: center;
+}
+
+.specify-input-line::-webkit-inner-spin-button,
+.specify-input-line::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.unit-label {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+#nicuDisplay {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+#csaDisplay {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+#vbiDisplay {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+#synDisplay {
+  cursor: pointer;
+  border-bottom: 1.5px solid #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-content {
+    margin: 10px 0 10px 20px;
+    flex: 1 1 100%;
+  }
+
+  .parent-note-wrapper {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Your Health Care</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="patient_lst.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="Your_Health_Care_Logo.png" alt="Your Health Care Logo" />
+        </div>
+        <nav class="nav-menu">
+          <button
+            class="nav-btn"
+            onclick="location.href='../admin_dashboard/dashboard.html'"
+          >
+            Home
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../add_new_doctor/new_user.html'"
+          >
+            Add Doctor
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../add_new_patient/patient_reg.html'"
+          >
+            Add patients
+          </button>
+          <button
+            class="nav-btn active"
+            onclick="location.href='../patient_list/patient_lst.html'"
+          >
+            Patient List
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../doctor_list/doctor_list.html'"
+          >
+            doctor List
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../available_indoor_patients/available_indoor_patient.html'"
+          >
+            Available patients
+          </button>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <header>
+          <div class="power-btn">
+            <img src="Power_Button.png" alt="Power Button" />
+          </div>
+        </header>
+        <div class="content-area">
+          <div class="filter-section">
+            <div class="search-bar">
+              <button>≡</button>
+              <input type="text" id="searchInput" placeholder="Search" />
+              <button>🔍</button>
+              <button id="resetButton">Reset</button>
+            </div>
+            <div class="date-filter">
+              <label for="fromDate">From:</label>
+              <div class="date-input-wrapper">
+                <input type="date" id="fromDate" />
+                <span class="calendar-icon">📅</span>
+              </div>
+              <label for="toDate">To:</label>
+              <div class="date-input-wrapper">
+                <input type="date" id="toDate" />
+                <span class="calendar-icon">📅</span>
+              </div>
+            </div>
+            <select id="filterOption">
+              <option value="none">Select Filter</option>
+              <option value="status">Display by Status</option>
+              <option value="birthDate">Display by Birth Date</option>
+              <option value="patientName">
+                Display Alphabetically by Name
+              </option>
+              <option value="nextCheckup">Display by Next Checkup Date</option>
+            </select>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Patient Name</th>
+                <th>Date of Birth</th>
+                <th>UHID</th>
+                <th>Contact Number</th>
+                <th>Last Checkup Date</th>
+                <th>Next Checkup Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="location.href='../add_results/demo.html'">
+                <td></td>
+                <td>Aryan Patil</td>
+                <td>02-03-2025</td>
+                <td>123456789</td>
+                <td>9876543210</td>
+                <td>10-03-2025</td>
+                <td>10-06-2025</td>
+                <td class="status approved">Approved</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Meera Joshi</td>
+                <td>15-02-2025</td>
+                <td>987654321</td>
+                <td>8765432109</td>
+                <td>20-02-2025</td>
+                <td>20-05-2025</td>
+                <td class="status pending">Pending</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Kiran Rao</td>
+                <td>28-01-2025</td>
+                <td>147258369</td>
+                <td>7654321098</td>
+                <td>05-02-2025</td>
+                <td>05-04-2025</td>
+                <td class="status overdue">Overdue</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Riya Sharma</td>
+                <td>10-02-2025</td>
+                <td>369258147</td>
+                <td>9123456780</td>
+                <td>15-02-2025</td>
+                <td>15-05-2025</td>
+                <td class="status pending">Pending</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Store original rows
+      let originalRows = [];
+      document.addEventListener("DOMContentLoaded", () => {
+        let rows = document.querySelectorAll("table tbody tr");
+        originalRows = Array.from(rows);
+      });
+
+      // Search and filter functionality
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", filterTable);
+      document
+        .getElementById("filterOption")
+        .addEventListener("change", filterTable);
+      document
+        .getElementById("fromDate")
+        .addEventListener("change", filterTable);
+      document.getElementById("toDate").addEventListener("change", filterTable);
+      document
+        .getElementById("resetButton")
+        .addEventListener("click", resetTable);
+
+      function filterTable() {
+        let searchInput = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        let fromDate = document.getElementById("fromDate").value;
+        let toDate = document.getElementById("toDate").value;
+        let filterOption = document.getElementById("filterOption").value;
+
+        let table = document.querySelector("table");
+        let tbody = table.getElementsByTagName("tbody")[0];
+
+        // Create a working array from original rows
+        let rowsArray = [...originalRows];
+
+        // Apply search filter
+        rowsArray = rowsArray.filter((row) => {
+          let cells = row.getElementsByTagName("td");
+          let match = cells.length === 0 || searchInput === "";
+          for (let j = 0; j < cells.length; j++) {
+            if (cells[j].textContent.toLowerCase().includes(searchInput)) {
+              match = true;
+              break;
+            }
+          }
+          return match;
+        });
+
+        // Apply date range filter
+        if (fromDate || toDate) {
+          rowsArray = rowsArray.filter((row) => {
+            let checkupDate = row.cells[6].textContent; // Next Checkup Date (column 6)
+            let date = new Date(checkupDate.split("-").reverse().join("-"));
+            let from = fromDate ? new Date(fromDate) : null;
+            let to = toDate ? new Date(toDate) : null;
+
+            if (from && to) {
+              return date >= from && date <= to;
+            } else if (from) {
+              return date >= from;
+            } else if (to) {
+              return date <= to;
+            }
+            return true;
+          });
+        }
+
+        // Apply sorting/filtering based on option
+        switch (filterOption) {
+          case "status":
+            rowsArray.sort((a, b) =>
+              a.cells[7].textContent.localeCompare(b.cells[7].textContent)
+            );
+            break;
+          case "birthDate":
+            rowsArray.sort(
+              (a, b) =>
+                new Date(
+                  a.cells[2].textContent.split("-").reverse().join("-")
+                ) -
+                new Date(b.cells[2].textContent.split("-").reverse().join("-"))
+            );
+            break;
+          case "patientName":
+            rowsArray.sort((a, b) =>
+              a.cells[1].textContent.localeCompare(b.cells[1].textContent)
+            );
+            break;
+          case "nextCheckup":
+            rowsArray.sort(
+              (a, b) =>
+                new Date(
+                  a.cells[6].textContent.split("-").reverse().join("-")
+                ) -
+                new Date(b.cells[6].textContent.split("-").reverse().join("-"))
+            );
+            break;
+        }
+
+        // Repopulate table
+        tbody.innerHTML = "";
+        rowsArray.forEach((row) => tbody.appendChild(row.cloneNode(true)));
+      }
+
+      function resetTable() {
+        let table = document.querySelector("table");
+        let tbody = table.getElementsByTagName("tbody")[0];
+        tbody.innerHTML = ""; // Clear current rows
+        originalRows.forEach((row) => tbody.appendChild(row.cloneNode(true))); // Restore original rows
+
+        // Reset input fields
+        document.getElementById("searchInput").value = "";
+        document.getElementById("fromDate").value = "";
+        document.getElementById("toDate").value = "";
+        document.getElementById("filterOption").value = "none";
+
+        // Reapply filter to ensure original state
+        filterTable();
+      }
+
+      //function goToPage(){
+      // window.location.href="../add_results/patient_results.html";
+      //}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Your Health Care</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="democss.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="Your_Health_Care_Logo.png" alt="Your Health Care Logo" />
+        </div>
+        <nav class="nav-menu">
+          <button
+            class="nav-btn"
+            onclick="location.href='../admin_dashboard/dashboard.html'"
+          >
+            Home
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../add_new_doctor/new_user.html'"
+          >
+            Add Doctor
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../add_new_patient/patient_reg.html'"
+          >
+            Add patients
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../patient_list/patient_lst.html'"
+          >
+            Patient List
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../doctor_list/doctor_list.html'"
+          >
+            doctor List
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../available_indoor_patients/available_indoor_patient.html'"
+          >
+            Available patients
+          </button>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <header>
+          <div class="header-icon">
+            <img src="Patient_Icon.png" alt="User Icon" />
+          </div>
+          <div class="power-btn">
+            <img src="Power_Button.png" alt="Power Button" />
+          </div>
+        </header>
+        <div class="content-area">
+          <div class="parent-note-wrapper">
+            <!-- Parent Details -->
+
+            <div class="card parent-card">
+              <h3>Parent Details:</h3>
+              <p>Mother Id: sdm001</p>
+              <p>Child Id: sdmC001</p>
+              <p>Mother's Name: Snehal</p>
+              <p>Father's Name: Atharv</p>
+              <p>Age: 28</p>
+              <p>Date: 19 - 3 - 1997</p>
+              <p>Time: 10:35 am</p>
+              <p>Ph number: 1234567890</p>
+              <p>Address: Dharwad, Karnataka</p>
+            </div>
+
+            <!-- Notes -->
+            <div class="card notes-card">
+              <h3>Notes:</h3>
+              <div class="notes-content">
+                Baby is healthy no need of further check-ups<br />
+                <!-- Repeat or simulate more text if needed to test scrolling -->
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+              </div>
+              <div class="button-row centered-buttons">
+                <button class="action-btn">Save Note</button>
+                <button class="action-btn">Send Message</button>
+              </div>
+            </div>
+
+            <!-- Right Buttons -->
+            <div class="button-column">
+              <button class="side-btn" onclick="location.href='natal.html'">
+                Edit details
+              </button>
+              <button class="side-btn">View doctor details</button>
+              <button class="side-btn">Placeholder</button>
+            </div>
+          </div>
+          <br />
+          <!-- Prenatal Card Section -->
+          <div class="prenatal-card">
+            <h3 style="text-align: center">Prenatal</h3>
+            <table class="prenatal-table">
+              <tbody>
+                <tr>
+                  <td>Excessive Vomiting</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="vomiting" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="vomiting" value="no" />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                  <td>Blood Sugar</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="sugar" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="sugar" value="no" />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Elderly pregnancy</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="elderly" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="elderly" value="no" />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                  <td>Rh Incompatibility</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="rh" value="yes" /> Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="rh" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>High/Low B.P</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="bp" value="yes" /> Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="bp" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                  <td>Ototoxic medications</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="oto" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="oto" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Viral/Bacterial infections</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input
+                          type="radio"
+                          id="viralYes"
+                          name="viral"
+                          value="yes"
+                        />
+                        Yes</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          id="viralNo"
+                          name="viral"
+                          value="no"
+                        />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                  <td>Smoking/alcohol</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="smoke" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="smoke" value="no" />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr id="specifyRow" class="hidden">
+                  <td colspan="6">
+                    <div class="specify-line">
+                      If yes, specify:
+                      <input type="text" class="specify-input" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Others Card Section -->
+          <div class="others-card">
+            <h3 style="text-align: center">Others</h3>
+            <table class="others-table">
+              <tbody>
+                <tr>
+                  <td>Consanguinity:</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input
+                          type="radio"
+                          name="consang"
+                          id="consangYes"
+                          value="yes"
+                        />
+                        yes</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="consang"
+                          id="consangNo"
+                          value="no"
+                        />
+                        no</label
+                      >
+                    </div>
+                  </td>
+                  <td colspan="3" id="consangOptions" class="hidden">
+                    <label><input type="checkbox" /> 1′</label>
+                    <label><input type="checkbox" /> 2′</label>
+                    <label><input type="checkbox" /> 3′</label>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Family History:</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input
+                          type="radio"
+                          name="history"
+                          id="historyNeg"
+                          value="negative"
+                        />
+                        negative</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="history"
+                          id="historyPos"
+                          value="positive"
+                        />
+                        positive</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr id="familyDetails" class="hidden">
+                  <td colspan="6">
+                    <!-- Relation Checkboxes -->
+                    <div class="option-group">
+                      <label><input type="checkbox" /> maternal</label>
+                      <label><input type="checkbox" /> paternal</label>
+                      <label><input type="checkbox" /> siblings</label>
+                    </div>
+
+                    <!-- H/O Conditions in Separate Lines -->
+                    <div
+                      style="
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                      "
+                    >
+                      <label><input type="checkbox" /> H/O hearing loss</label>
+                      <label
+                        ><input type="checkbox" /> H/O Speech Language
+                        disorder</label
+                      >
+                      <label
+                        ><input type="checkbox" /> H/O Intellectual
+                        Disability</label
+                      >
+                      <label
+                        ><input type="checkbox" /> H/O motor Disorder</label
+                      >
+                    </div>
+
+                    <!-- Others Field -->
+                    <div style="margin-top: 10px">
+                      Others: <input type="text" class="specify-input" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Natal Card Section -->
+          <div class="natal-card">
+            <h3 style="text-align: center">Natal</h3>
+            <table class="natal-table">
+              <tbody>
+                <tr>
+                  <td>Type of Delivery</td>
+                  <td colspan="5">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="delivery" value="Normal" />
+                        Normal</label
+                      >
+                      <label
+                        ><input type="radio" name="delivery" value="Breech" />
+                        Breech</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="delivery"
+                          value="C-section"
+                        />
+                        C-section</label
+                      >
+                      <label
+                        ><input type="radio" name="delivery" value="Induced" />
+                        Induced</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="delivery"
+                          value="Aided_by_forceps"
+                        />
+                        Aided by forceps</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Low birth weight</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input
+                          type="radio"
+                          id="lbwYes"
+                          name="lbw"
+                          value="yes"
+                        />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" id="lbwNo" name="lbw" value="no" />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr id="lbwSpecifyRow" class="hidden">
+                  <td colspan="6">
+                    <div class="specify-line">
+                      If yes, specify:
+                      <input
+                        type="number"
+                        class="specify-input-line"
+                        id="lbwInput"
+                      />
+                      <span class="unit-label" id="kgLabel">Kg</span>
+                      <span
+                        class="unit-label"
+                        id="lbwDisplay"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Delayed birth cry</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="dbc" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="dbc" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr id="dbcSpecifyRow" class="hidden">
+                  <td colspan="6">
+                    <div class="specify-line">
+                      If yes, specify:
+                      <input
+                        type="number"
+                        class="specify-input-line"
+                        id="dbcInput"
+                      />
+                      <span class="unit-label" id="dbcLabel">sec/min</span>
+                      <span
+                        class="unit-label"
+                        id="dbcDisplay"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Premature delivery</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="pd" value="yes" /> Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="pd" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr id="pdSpecifyRow" class="hidden">
+                  <td colspan="6">
+                    <div class="specify-line">
+                      If yes, specify:
+                      <input
+                        type="number"
+                        class="specify-input-line"
+                        id="pdInput"
+                      />
+                      <span class="unit-label" id="pdLabel">Month</span>
+                      <span
+                        class="unit-label"
+                        id="pdDisplay"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Birth asphyxia</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="ba" value="yes" /> Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="ba" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>APGAR score</td>
+                  <td colspan="5">
+                    <div class="specify-line">
+                      <input
+                        type="number"
+                        class="specify-input-line"
+                        id="apgar1Input"
+                      />
+                      <span class="unit-label" id="apgar1Unit">@1 min</span>
+                      <span
+                        class="unit-label"
+                        id="apgar1Display"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>APGAR score</td>
+                  <td colspan="5">
+                    <div class="specify-line">
+                      <input
+                        type="number"
+                        class="specify-input-line"
+                        id="apgar2Input"
+                      />
+                      <span class="unit-label" id="apgar2Unit">@5 min</span>
+                      <span
+                        class="unit-label"
+                        id="apgar2Display"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Meconium aspiration</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="ma" value="yes" /> Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="ma" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="postnatal-card">
+            <h3 style="text-align: center">Post Natal</h3>
+            <table class="postnatal-table">
+              <tbody>
+                <tr>
+                  <td>NICU Stay</td>
+                  <td colspan="5">
+                    <div class="option-group">
+                      <label
+                        ><input
+                          type="radio"
+                          id="nicuYes"
+                          name="nicu"
+                          value="yes"
+                        />
+                        Yes</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          id="nicuNo"
+                          name="nicu"
+                          value="no"
+                        />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr id="nicuSpecifyRow" class="hidden">
+                  <td colspan="6">
+                    <div class="specify-line">
+                      If yes, specify:
+                      <input type="text" class="specify-input" id="nicuInput" />
+                      <span
+                        class="unit-label"
+                        id="nicuDisplay"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Craniofacial / Structural Anomalies</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input
+                          type="radio"
+                          id="csaYes"
+                          name="csa"
+                          value="yes"
+                        />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" id="csaNo" name="csa" value="no" />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr id="csaSpecifyRow" class="hidden">
+                  <td colspan="6">
+                    <div class="specify-line">
+                      If yes, specify:
+                      <input type="text" class="specify-input" id="csaInput" />
+                      <span
+                        class="unit-label"
+                        id="csaDisplay"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Viral / Bactertal Infections</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="vbi" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="vbi" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr id="vbiSpecifyRow" class="hidden">
+                  <td colspan="6">
+                    <div class="specify-line">
+                      If yes, specify:
+                      <input type="text" class="specify-input" id="vbiInput" />
+                      <span
+                        class="unit-label"
+                        id="vbiDisplay"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Seizures</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="sz" value="yes" /> Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="sz" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Trauma of head or neck</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="trauma" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="trauma" value="no" />
+                        No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Syndrome</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="syn" value="yes" />
+                        Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="syn" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr id="synSpecifyRow" class="hidden">
+                  <td colspan="6">
+                    <div class="specify-line">
+                      If yes, specify:
+                      <input type="text" class="specify-input" id="synInput" />
+                      <span
+                        class="unit-label"
+                        id="synDisplay"
+                        style="display: none"
+                      ></span>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Neonatal Jaundice</td>
+                  <td colspan="2">
+                    <div class="option-group">
+                      <label
+                        ><input type="radio" name="nj" value="yes" /> Yes</label
+                      >
+                      <label
+                        ><input type="radio" name="nj" value="no" /> No</label
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Prenatal Section: Show/hide specify row for Viral/Bacterial infections
+      const prenatalViralYes = document.getElementById("viralYes");
+      const prenatalViralNo = document.getElementById("viralNo");
+      const prenatalSpecifyRow = document.getElementById("specifyRow");
+
+      prenatalViralYes.addEventListener("change", () => {
+        if (prenatalViralYes.checked) {
+          prenatalSpecifyRow.classList.remove("hidden");
+          prenatalViralNo.checked = false;
+        }
+      });
+
+      prenatalViralNo.addEventListener("change", () => {
+        if (prenatalViralNo.checked) {
+          prenatalSpecifyRow.classList.add("hidden");
+          prenatalViralYes.checked = false;
+        }
+      });
+
+      // Consanguinity logic
+      const consangYes = document.getElementById("consangYes");
+      const consangNo = document.getElementById("consangNo");
+      const consangOptions = document.getElementById("consangOptions");
+
+      consangYes.addEventListener("change", () => {
+        if (consangYes.checked) {
+          consangOptions.classList.remove("hidden");
+          consangNo.checked = false;
+        }
+      });
+
+      consangNo.addEventListener("change", () => {
+        if (consangNo.checked) {
+          consangOptions.classList.add("hidden");
+          consangYes.checked = false;
+        }
+      });
+
+      // Family history logic
+      const historyNeg = document.getElementById("historyNeg");
+      const historyPos = document.getElementById("historyPos");
+      const familyDetails = document.getElementById("familyDetails");
+
+      historyPos.addEventListener("change", () => {
+        if (historyPos.checked) {
+          familyDetails.classList.remove("hidden");
+          historyNeg.checked = false;
+        }
+      });
+
+      historyNeg.addEventListener("change", () => {
+        if (historyNeg.checked) {
+          familyDetails.classList.add("hidden");
+          historyPos.checked = false;
+        }
+      });
+
+      // Make radio buttons uncheckable
+      document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+        radio.addEventListener("mousedown", function (e) {
+          if (this.checked) {
+            this.previousState = true;
+          } else {
+            this.previousState = false;
+          }
+        });
+
+        radio.addEventListener("click", function (e) {
+          if (this.previousState) {
+            this.checked = false;
+            this.dispatchEvent(new Event("change")); // trigger change events
+          }
+        });
+      });
+      const lbwRadios = document.getElementsByName("lbw");
+      const lbwSpecifyRow = document.getElementById("lbwSpecifyRow");
+      const lbwInput = document.getElementById("lbwInput");
+      const lbwDisplay = document.getElementById("lbwDisplay");
+      const kgLabel = document.getElementById("kgLabel");
+
+      lbwRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "yes" && radio.checked) {
+            lbwSpecifyRow.classList.remove("hidden");
+            lbwInput.style.display = "inline";
+            kgLabel.style.display = "inline";
+            lbwDisplay.style.display = "none";
+            lbwInput.value = ""; // Reset input field
+          } else if (radio.value === "no" && radio.checked) {
+            lbwSpecifyRow.classList.add("hidden");
+            lbwInput.value = "";
+            lbwDisplay.textContent = "";
+          }
+        });
+      });
+
+      lbwInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && lbwInput.value.trim() !== "") {
+          const value = lbwInput.value.trim();
+          lbwDisplay.textContent = `${value} Kg`;
+          lbwInput.style.display = "none";
+          kgLabel.style.display = "none";
+          lbwDisplay.style.display = "inline";
+        }
+      });
+
+      lbwDisplay.addEventListener("click", () => {
+        const currentValue = lbwDisplay.textContent.replace(" Kg", "").trim();
+        lbwInput.value = currentValue;
+        lbwInput.style.display = "inline";
+        kgLabel.style.display = "inline";
+        lbwDisplay.style.display = "none";
+        lbwInput.focus();
+      });
+
+      const dbcRadios = document.getElementsByName("dbc");
+      const dbcSpecifyRow = document.getElementById("dbcSpecifyRow");
+      const dbcInput = document.getElementById("dbcInput");
+      const dbcLabel = document.getElementById("dbcLabel");
+      const dbcDisplay = document.getElementById("dbcDisplay");
+
+      dbcRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "yes" && radio.checked) {
+            dbcSpecifyRow.classList.remove("hidden");
+            dbcInput.style.display = "inline";
+            dbcLabel.style.display = "inline";
+            dbcDisplay.style.display = "none";
+            dbcInput.value = "";
+          } else if (radio.value === "no" && radio.checked) {
+            dbcSpecifyRow.classList.add("hidden");
+            dbcInput.value = "";
+            dbcDisplay.textContent = "";
+          }
+        });
+      });
+
+      dbcInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && dbcInput.value.trim() !== "") {
+          const value = dbcInput.value.trim();
+          dbcDisplay.textContent = `${value} sec/min`;
+          dbcInput.style.display = "none";
+          dbcLabel.style.display = "none";
+          dbcDisplay.style.display = "inline";
+        }
+      });
+
+      dbcDisplay.addEventListener("click", () => {
+        const currentValue = dbcDisplay.textContent
+          .replace(" sec/min", "")
+          .trim();
+        dbcInput.value = currentValue;
+        dbcInput.style.display = "inline";
+        dbcLabel.style.display = "inline";
+        dbcDisplay.style.display = "none";
+        dbcInput.focus();
+      });
+
+      const pdRadios = document.getElementsByName("pd");
+      const pdSpecifyRow = document.getElementById("pdSpecifyRow");
+      const pdInput = document.getElementById("pdInput");
+      const pdLabel = document.getElementById("pdLabel");
+      const pdDisplay = document.getElementById("pdDisplay");
+
+      pdRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "yes" && radio.checked) {
+            pdSpecifyRow.classList.remove("hidden");
+            pdInput.style.display = "inline";
+            pdLabel.style.display = "inline";
+            pdDisplay.style.display = "none";
+            pdInput.value = ""; // Reset input
+          } else if (radio.value === "no" && radio.checked) {
+            pdSpecifyRow.classList.add("hidden");
+            pdInput.value = "";
+            pdDisplay.textContent = "";
+          }
+        });
+      });
+
+      pdInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && pdInput.value.trim() !== "") {
+          const value = pdInput.value.trim();
+          pdDisplay.textContent = `${value} Month`;
+          pdInput.style.display = "none";
+          pdLabel.style.display = "none";
+          pdDisplay.style.display = "inline";
+        }
+      });
+
+      pdDisplay.addEventListener("click", () => {
+        const currentValue = pdDisplay.textContent
+          .replace(" months", "")
+          .trim();
+        pdInput.value = currentValue;
+        pdInput.style.display = "inline";
+        pdLabel.style.display = "inline";
+        pdDisplay.style.display = "none";
+        pdInput.focus();
+      });
+
+      const apgar1Input = document.getElementById("apgar1Input");
+      const apgar1Unit = document.getElementById("apgar1Unit");
+      const apgar1Display = document.getElementById("apgar1Display");
+
+      apgar1Input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && apgar1Input.value.trim() !== "") {
+          const value = apgar1Input.value.trim();
+          apgar1Display.textContent = `${value} @1 min`;
+          apgar1Input.style.display = "none";
+          apgar1Unit.style.display = "none";
+          apgar1Display.style.display = "inline";
+        }
+      });
+
+      apgar1Display.addEventListener("click", () => {
+        const valueOnly = apgar1Display.textContent.split(" ")[0];
+        apgar1Input.value = valueOnly;
+        apgar1Input.style.display = "inline";
+        apgar1Unit.style.display = "inline";
+        apgar1Display.style.display = "none";
+        apgar1Input.focus();
+      });
+
+      const apgar2Input = document.getElementById("apgar2Input");
+      const apgar2Unit = document.getElementById("apgar2Unit");
+      const apgar2Display = document.getElementById("apgar2Display");
+
+      apgar2Input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && apgar2Input.value.trim() !== "") {
+          const value = apgar2Input.value.trim();
+          apgar2Display.textContent = `${value} @5 min`;
+          apgar2Input.style.display = "none";
+          apgar2Unit.style.display = "none";
+          apgar2Display.style.display = "inline";
+        }
+      });
+
+      apgar2Display.addEventListener("click", () => {
+        const valueOnly = apgar2Display.textContent.split(" ")[0];
+        apgar2Input.value = valueOnly;
+        apgar2Input.style.display = "inline";
+        apgar2Unit.style.display = "inline";
+        apgar2Display.style.display = "none";
+        apgar2Input.focus();
+      });
+
+      // post natal
+      const nicuRadios = document.getElementsByName("nicu");
+      const nicuSpecifyRow = document.getElementById("nicuSpecifyRow");
+      const nicuInput = document.getElementById("nicuInput");
+      const nicuDisplay = document.getElementById("nicuDisplay");
+
+      nicuRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "yes" && radio.checked) {
+            nicuSpecifyRow.classList.remove("hidden");
+            nicuInput.style.display = "inline";
+            nicuDisplay.style.display = "none";
+            nicuInput.value = ""; // Reset input field
+          } else if (radio.value === "no" && radio.checked) {
+            nicuSpecifyRow.classList.add("hidden");
+            nicuInput.value = "";
+            nicuDisplay.textContent = "";
+          }
+        });
+      });
+
+      nicuInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && nicuInput.value.trim() !== "") {
+          const value = nicuInput.value.trim();
+          nicuDisplay.textContent = value;
+          nicuInput.style.display = "none";
+          nicuDisplay.style.display = "inline";
+        }
+      });
+
+      nicuDisplay.addEventListener("click", () => {
+        const currentValue = nicuDisplay.textContent.trim();
+        nicuInput.value = currentValue;
+        nicuInput.style.display = "inline";
+        nicuDisplay.style.display = "none";
+        nicuInput.focus();
+      });
+
+      const csaRadios = document.getElementsByName("csa"); // radio buttons must use name="csa"
+      const csaSpecifyRow = document.getElementById("csaSpecifyRow");
+      const csaInput = document.getElementById("csaInput");
+      const csaDisplay = document.getElementById("csaDisplay");
+
+      csaRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "yes" && radio.checked) {
+            csaSpecifyRow.classList.remove("hidden");
+            csaInput.style.display = "inline";
+            csaDisplay.style.display = "none";
+            csaInput.value = ""; // Reset input
+          } else if (radio.value === "no" && radio.checked) {
+            csaSpecifyRow.classList.add("hidden");
+            csaInput.value = "";
+            csaDisplay.textContent = "";
+          }
+        });
+      });
+
+      csaInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && csaInput.value.trim() !== "") {
+          const value = csaInput.value.trim();
+          csaDisplay.textContent = value;
+          csaInput.style.display = "none";
+          csaDisplay.style.display = "inline";
+        }
+      });
+
+      csaDisplay.addEventListener("click", () => {
+        const currentValue = csaDisplay.textContent.trim();
+        csaInput.value = currentValue;
+        csaInput.style.display = "inline";
+        csaDisplay.style.display = "none";
+        csaInput.focus();
+      });
+
+      const vbiRadios = document.getElementsByName("vbi"); // make sure your radio buttons use name="vbi"
+      const vbiSpecifyRow = document.getElementById("vbiSpecifyRow");
+      const vbiInput = document.getElementById("vbiInput");
+      const vbiDisplay = document.getElementById("vbiDisplay");
+
+      vbiRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "yes" && radio.checked) {
+            vbiSpecifyRow.classList.remove("hidden");
+            vbiInput.style.display = "inline";
+            vbiDisplay.style.display = "none";
+            vbiInput.value = ""; // Reset input
+          } else if (radio.value === "no" && radio.checked) {
+            vbiSpecifyRow.classList.add("hidden");
+            vbiInput.value = "";
+            vbiDisplay.textContent = "";
+          }
+        });
+      });
+
+      vbiInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && vbiInput.value.trim() !== "") {
+          const value = vbiInput.value.trim();
+          vbiDisplay.textContent = value;
+          vbiInput.style.display = "none";
+          vbiDisplay.style.display = "inline";
+        }
+      });
+
+      vbiDisplay.addEventListener("click", () => {
+        const currentValue = vbiDisplay.textContent.trim();
+        vbiInput.value = currentValue;
+        vbiInput.style.display = "inline";
+        vbiDisplay.style.display = "none";
+        vbiInput.focus();
+      });
+
+      const synRadios = document.getElementsByName("syn"); // Ensure radio buttons use name="syn"
+      const synSpecifyRow = document.getElementById("synSpecifyRow");
+      const synInput = document.getElementById("synInput");
+      const synDisplay = document.getElementById("synDisplay");
+
+      // Event listener for the radio buttons (Yes/No)
+      synRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "yes" && radio.checked) {
+            // Show the specify row and input
+            synSpecifyRow.classList.remove("hidden");
+            synInput.style.display = "inline";
+            synDisplay.style.display = "none";
+            synInput.value = ""; // Reset input field
+          } else if (radio.value === "no" && radio.checked) {
+            // Hide the specify row and reset everything
+            synSpecifyRow.classList.add("hidden");
+            synInput.value = "";
+            synDisplay.textContent = "";
+          }
+        });
+      });
+
+      // Event listener for the "Enter" key on the input field
+      synInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && synInput.value.trim() !== "") {
+          const value = synInput.value.trim();
+          synDisplay.textContent = value; // Set the text in the display span
+          synInput.style.display = "none"; // Hide the input
+          synDisplay.style.display = "inline"; // Show the display text
+        }
+      });
+
+      // Event listener for clicking on the display text to edit it
+      synDisplay.addEventListener("click", () => {
+        const currentValue = synDisplay.textContent.trim();
+        synInput.value = currentValue; // Set input value to current text
+        synInput.style.display = "inline"; // Show input field
+        synDisplay.style.display = "none"; // Hide the display text
+        synInput.focus(); // Focus the input field
+      });
+    </script>
+  </body>
+</html>

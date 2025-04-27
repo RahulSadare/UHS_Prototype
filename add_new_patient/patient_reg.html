@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Your Health Care</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="patient_reg.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="Group 3 (1).png" alt="Your Health Care Logo" />
+        </div>
+        <nav class="nav-menu">
+          <button
+            class="nav-btn"
+            onclick="location.href='../admin_dashboard/dashboard.html'"
+          >
+            Home
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../add_new_doctor/new_user.html'"
+          >
+            Add Doctor
+          </button>
+          <button
+            class="nav-btn active"
+            onclick="location.href='../add_new_patient/patient_reg.html'"
+          >
+            Add patients
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../patient_list/patient_lst.html'"
+          >
+            Patient List
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../doctor_list/doctor_list.html'"
+          >
+            doctor List
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../available_indoor_patients/available_indoor_patient.html'"
+          >
+            Available patients
+          </button>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <header>
+          <div class="power-btn">
+            <img src="Group 16.png" alt="Power Button" />
+          </div>
+        </header>
+        <div class="content-area">
+          <!-- Dynamic content goes here -->
+
+          <h2 class="form-title">Patient Registration</h2>
+          <form class="form-grid">
+            <div class="input-box">
+              <input type="text" required placeholder=" " />
+              <label>Name</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required placeholder=" " />
+              <label>UHID number</label>
+            </div>
+            <div class="input-box">
+              <input type="date" required placeholder=" " />
+              <label>DOB</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required placeholder=" " />
+              <label>Unique mother ID</label>
+            </div>
+            <div class="input-box">
+              <input type="number" required placeholder=" " />
+              <label>Age</label>
+            </div>
+            <div class="input-box">
+              <input type="date" required placeholder=" " />
+              <label>Date</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required placeholder=" " />
+              <label>Gender</label>
+            </div>
+            <div class="input-box full-width">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

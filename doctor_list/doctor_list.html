@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Your Health Care</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="doctor_list.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="Group 3 (1).png" alt="Your Health Care Logo" />
+        </div>
+        <nav class="nav-menu">
+          <button
+            class="nav-btn"
+            onclick="location.href='../admin_dashboard/dashboard.html'"
+          >
+            Home
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../add_new_doctor/new_user.html'"
+          >
+            Add Doctor
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../add_new_patient/patient_reg.html'"
+          >
+            Add patients
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../patient_list/patient_lst.html'"
+          >
+            Patient List
+          </button>
+          <button
+            class="nav-btn active"
+            onclick="location.href='../doctor_list/doctor_list.html'"
+          >
+            doctor List
+          </button>
+          <button
+            class="nav-btn"
+            onclick="location.href='../available_indoor_patients/available_indoor_patient.html'"
+          >
+            Available patients
+          </button>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <header>
+          <div class="header-icon">
+            <img src="image 2.png" alt="User Icon" />
+          </div>
+          <div class="power-btn">
+            <img src="Group 16.png" alt="Power Button" />
+          </div>
+        </header>
+        <div class="content-area">
+          <h2 class="section-title">Available Doctors</h2>
+          <div class="doctor-list">
+            <div class="doctor-card">
+              <h3>Dr. Averil McCloch</h3>
+              <p>Specialization: Hypertension Specialist</p>
+              <p>Available: 11:04 PM</p>
+            </div>
+            <div class="doctor-card">
+              <h3>Dr. Obie Martinek</h3>
+              <p>Specialization: Abdominal Pain Specialist</p>
+              <p>Available: 11:04 PM</p>
+            </div>
+            <div class="doctor-card">
+              <h3>Dr. Homere Spray</h3>
+              <p>Specialization: Hypertension Specialist</p>
+              <p>Available: 11:04 PM</p>
+            </div>
+            <div class="doctor-card">
+              <h3>Dr. Lilia Stickley</h3>
+              <p>Specialization: Hypertension Specialist</p>
+              <p>Available: 11:04 PM</p>
+            </div>
+            <div class="doctor-card">
+              <h3>Dr. Durant Bridie</h3>
+              <p>Specialization: Hypertension Specialist</p>
+              <p>Available: 11:04 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
