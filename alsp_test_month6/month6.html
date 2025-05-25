@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Your Health Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="test.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="health_care.png" alt="Your Health Care Logo" />
+        </div>
+        <nav class="nav-menu">
+          <button class="nav-btn" onclick="location.href='../admin_dashboard/dashboard.html'">Home</button>
+          <button class="nav-btn" onclick="location.href='../add_new_doctor/new_user.html'">Add Doctor</button>
+          <button class="nav-btn" onclick="location.href='../add_new_patient/patient_reg.html'">Add patients</button>
+          <button class="nav-btn" onclick="location.href='../patient_list/patient_lst.html'">Patient List</button>
+          <button class="nav-btn" onclick="location.href='../doctor_list/doctor_list.html'">doctor List</button>
+          <button class="nav-btn" onclick="location.href='../available_indoor_patients/available_indoor_patient.html'">Available patients</button>
+        </nav>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- <header>
+          <div class="header-icon">
+            <img src="image 2.png" alt="User Icon" />
+          </div>
+          <div class="power-btn">
+            <img src="Group 16.png" alt="Power Button" />
+          </div>
+        </header> -->
+
+        <!-- <button onclick="history.back()">⬅ Back</button> -->
+
+        <div class="test-nav">
+          <button class="test-tab" onclick="location.href='../alsp_test/test.html'">Initial Test</button>
+          <button class="test-tab" onclick="location.href='../alsp_test_month1/month1.html'">1st Month</button>
+          <button class="test-tab" onclick="location.href='../alsp_test_month3/month3.html'">3rd Month</button>
+          <button class="test-tab active">6th Month</button>
+        </div>
+        <div class="content-area">
+          <!-- Test Navigation Tabs -->
+          <div class="parent-note-wrapper">
+            <!-- Parent Details -->
+
+            <div class="card parent-card">
+              <h3>Parent Details:</h3>
+              <p>Mother Id: sdm001</p>
+              <p>Child Id: sdmC001</p>
+              <p>Mother's Name: Snehal</p>
+              <p>Father's Name: Atharv</p>
+              <p>Age: 28</p>
+              <p>Date: 19 - 3 - 1997</p>
+              <p>Time: 10:35 am</p>
+              <p>Ph number: 1234567890</p>
+              <p>Address: Dharwad, Karnataka</p>
+            </div>
+
+            <!-- Notes -->
+            <div class="card notes-card">
+              <h3>Notes:</h3>
+              <div class="notes-content">
+                Baby is healthy no need of further check-ups<br />
+                <!-- Repeat or simulate more text if needed to test scrolling -->
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+                Baby is healthy no need of further check-ups<br />
+              </div>
+              <div class="button-row centered-buttons">
+                <button class="action-btn">Save Note</button>
+                <button class="action-btn">Send Message</button>
+              </div>
+            </div>
+
+            <!-- Right Buttons we can add more buttons like this -->
+            <!-- `
+            <div class="button-column">
+              <button class="side-btn">Edit details</button>
+              <button class="side-btn">View doctor details</button>
+              <button class="side-btn">Placeholder</button>
+            </div> -->
+
+            <!--  Speech and Hearing Section -->
+            <!-- Newborn Hearing Screening Form -->
+          </div>
+          <div class="HaS">
+            <h4 style="text-align: center">Speech and Hearing</h4>
+
+            <!-- SECTION: Initial Hearing Screening -->
+            <div class="screening-section" id="initialSection">
+              <!-- Date row (right-aligned) -->
+              <div class="HaS-date-row">
+                <label for="screeningDate" style="margin-right: 10px; font-weight: bold">Date:</label>
+                <input type="date" id="screeningDate" name="screeningDate" />
+              </div>
+
+              <!-- SECTION: 6-Month Evaluation -->
+              <!-- Main Question -->
+              <div class="screening-section" id="fourthSection">
+                <h4 style="text-align: center">6-Month</h4>
+                <table class="HaS-table">
+                  <tbody>
+                    <tr>
+                      <td colspan="6" style="height: 20px"></td>
+                    </tr>
+                    <!-- Yes / No -->
+                    <tr>
+                      <td colspan="6">
+                        <div class="specify-line" style="display: flex; align-items: center; gap: 20px">
+                          <label style="font-weight: bold; font-size: 16px; min-width: 350px; padding-left: 1px"> Is habilitation/management started for the child? </label>
+                          <div class="option-group" style="gap: 30px">
+                            <label><input type="radio" name="habStart" value="yes" id="habYes" /> Yes</label>
+                            <label><input type="radio" name="habStart" value="no" id="habNo" /> No</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- If Yes line -->
+                    <tr id="habIfYesRow" class="hidden">
+                      <td colspan="6">
+                        <div style="padding-left: 1px; font-weight: bold">If Yes,</div>
+                      </td>
+                    </tr>
+
+                    <!-- Date input -->
+                    <tr id="habDateRow" class="hidden">
+                      <td colspan="6">
+                        <div class="HaS-date-row" style="padding-left: 20px; display: block">
+                          <label for="habilitationDate" style="margin-right: 10px; font-weight: bold">Date:</label>
+                          <input type="date" id="habilitationDate" name="habilitationDate" />
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Medical management (ENT) -->
+                    <tr id="habEntRow" class="hidden">
+                      <td colspan="6">
+                        <div class="specify-line" style="display: flex; align-items: center; gap: 20px">
+                          <label style="min-width: 350px; padding-left: 20px">Medical management (ENT):</label>
+                          <div class="option-group" style="gap: 30px">
+                            <label><input type="radio" name="mmOption" id="mmYes" value="yes" /> Yes</label>
+                            <label><input type="radio" name="mmOption" id="mmNo" value="no" /> No</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Audiological management -->
+                    <tr id="habAmRow" class="hidden">
+                      <td colspan="6">
+                        <div class="specify-line" style="display: flex; align-items: center; gap: 20px">
+                          <label style="min-width: 350px; padding-left: 20px">Audiological management:</label>
+                          <div class="option-group" style="gap: 30px">
+                            <label><input type="radio" name="amOption" id="amYes" value="yes" /> Yes</label>
+                            <label><input type="radio" name="amOption" id="amNo" value="no" /> No</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Sub-option: Hearing Aids -->
+                    <tr id="amHaRow" class="hidden">
+                      <td colspan="6">
+                        <div class="specify-line" style="display: flex; align-items: center; gap: 20px">
+                          <label style="min-width: 350px; padding-left: 45px; font-style: italic">Hearing Aids:</label>
+                          <div class="option-group" style="gap: 30px">
+                            <label><input type="radio" name="haOption" id="haYes" value="yes" /> Yes</label>
+                            <label><input type="radio" name="haOption" id="haNo" value="no" /> No</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Sub-option: Cochlear Implant -->
+                    <tr id="amCiRow" class="hidden">
+                      <td colspan="6">
+                        <div class="specify-line" style="display: flex; align-items: center; gap: 20px">
+                          <label style="min-width: 350px; padding-left: 45px; font-style: italic">Cochlear Implant:</label>
+                          <div class="option-group" style="gap: 30px">
+                            <label><input type="radio" name="ciOption" id="ciYes" value="yes" /> Yes</label>
+                            <label><input type="radio" name="ciOption" id="ciNo" value="no" /> No</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Sub-option: Auditory Verbal Therapy -->
+                    <tr id="amAvtRow" class="hidden">
+                      <td colspan="6">
+                        <div class="specify-line" style="display: flex; align-items: center; gap: 20px">
+                          <label style="min-width: 350px; padding-left: 45px; font-style: italic">Auditory Verbal Therapy:</label>
+                          <div class="option-group" style="gap: 30px">
+                            <label><input type="radio" name="avtOption" id="avtYes" value="yes" /> Yes</label>
+                            <label><input type="radio" name="avtOption" id="avtNo" value="no" /> No</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="button-row centered-buttons">
+                  <button class="action-btn save-btn" data-section="4">Save</button>
+                </div>
+              </div>
+              <!-- Your screening content starts here -->
+            </div>
+          </div>
+        </div>
+
+        <br /><br />
+      </div>
+    </div>
+  </body>
+</html>
